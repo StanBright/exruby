@@ -31,15 +31,18 @@ defmodule Exruby.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev},
+    ]
   end
 
   defp package do
     [
       name: :exruby,
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      files: ["lib", "mix.exs", "README*"],
       maintainers: ["Stan Bright"],
-      licence: "MIT",
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/StanBright/exruby"}
     ]
   end
 end
